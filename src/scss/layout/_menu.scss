@@ -1,0 +1,165 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+.menu {
+    background: #FFFFFF;
+    border: 1px solid #F1F1F1;
+    border-radius: 6px;
+    transition: all .225s;
+    &__inner {
+        padding: 10px 0;
+        position: relative;
+    }
+    &__item {
+        padding: 10px 20px;
+        &:hover {
+            @media screen and (min-width: 992px) {
+                .menu__item-hidden {
+                    opacity: 1;
+                    pointer-events: unset;
+                }
+            }
+        }
+        &-show {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            line-height: 150%;
+            transition: all .225s;
+            &:hover {
+                cursor: pointer;
+                @include linearText;
+            }
+            span {
+                white-space: nowrap;
+            }
+            img {
+                margin-right: 14px;
+            }
+        }
+        &-hidden {
+            transition: all .225s;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: calc(100% - 7px);
+            background-color: #fff;
+            border: 1px solid #F1F1F1;
+            border-radius: 0 6px 6px 6px;
+            width: 553px;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 10;
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                height: 57px;
+                width: 1px;
+                background-color: #fff;
+                left: 0;
+                top: 0;
+            }
+        }
+        &-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .nst-content {
+            @media screen and (min-width: 992px) {
+                display: block !important;
+                max-height: unset !important;
+            }
+        }
+    }
+    &__link {
+        height: 57px;
+        display: flex;
+        align-items: center;
+        padding-left: 50px;
+        position: relative;
+        border-top: 1px solid #F1F1F1;
+        border-bottom: 1px solid #F1F1F1;
+        margin-top: -1px;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            left: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: $primary-gradient;
+        }
+    }
+    &__backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 11;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .menu {
+        &__inner {
+            padding: 0;
+        }
+        &__item {
+            padding: 0;
+            border-bottom: 1px solid #f1f1f1;
+            &-show {
+                position: relative;
+                padding: 15px 30px 15px 15px;
+                font-size: 14px;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    z-index: 1;
+                    width: 10px;
+                    height: 10px;
+                    right: 20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-image: url(../../img/arrow-right.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                img {
+                    margin-right: 11px;
+                }
+            }
+            &-hidden {
+                position: static;
+                opacity: 1;
+                pointer-events: unset;
+                width: 100%;
+                border-radius: 0;
+                border: none;
+            }
+            &-links {
+                grid-template-columns: 1fr;
+            }
+            &.nst-is-expanded {
+                .menu__item-show {
+                    &::before {
+                        transform: translateY(-50%) rotate(90deg);
+                    }
+                }
+            }
+        }
+        &__link {
+            height: 55px;
+            margin: 0;
+            font-size: 14px;
+            padding-left: 40px;
+            &::before {
+                left: 16px;
+            }
+        }
+    }
+}

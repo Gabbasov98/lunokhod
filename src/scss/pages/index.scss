@@ -1,0 +1,305 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+.main {
+    padding-bottom: 32px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        width: 292px;
+        flex-shrink: 0;
+        margin-right: 24px;
+    }
+    &__right {
+        flex-grow: 1;
+    }
+    &__img {
+        img {
+            display: block;
+            width: 100%;
+            border-radius: 6px;
+        }
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        margin-top: 24px;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        font-size: 14px;
+        line-height: 120%;
+        border: 1px solid #F1F1F1;
+        border-radius: 6px;
+        height: 112px;
+        &:hover {
+            border-color: $black;
+        }
+        img {
+            flex-shrink: 0;
+            display: block;
+            margin-right: 12px;
+        }
+    }
+}
+
+.advantages {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    &__item {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 143%;
+        &-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            background-color: rgba($primary, .2);
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.collection {
+    padding: 36px 0;
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
+    .swiper {
+        &-container {
+            overflow: hidden;
+        }
+        &-wrapper {
+            align-items: stretch;
+        }
+        &-slide {
+            height: auto;
+        }
+        &-button {
+            &-prev,
+            &-next {
+                position: static;
+                margin: 0;
+                margin-left: 10px;
+            }
+        }
+    }
+    &__slider {
+        margin-top: 24px;
+    }
+    .catalog-card {
+        height: 100%;
+    }
+}
+
+.news-index {
+    padding: 36px 0;
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__link {
+        @include linearText;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.news {
+    &__wrap {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(3, calc((100% / 3) - 16px));
+        gap: 24px;
+        @media screen and (max-width: 850px) {
+            grid-template-columns: repeat(2, calc(50% - 12px));
+        }
+        @media screen and (max-width: 576px) {
+            grid-template-columns: 100%;
+        }
+    }
+}
+
+.about-index {
+    padding: 44px 0 48px;
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, calc(50% - 12px));
+        gap: 24px;
+    }
+    &__text {
+        padding-top: 14px;
+    }
+    &__desc {
+        margin-top: 16px;
+    }
+    &__img {
+        img {
+            border-radius: 6px;
+            width: 100%;
+            display: block;
+        }
+    }
+    &__btn {
+        margin-top: 29px;
+        padding: 0 54px;
+        height: 48px;
+        display: inline-flex;
+    }
+}
+
+.map {
+    padding: 48px 0;
+    &__inner {
+        height: 340px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .main {
+        &__items {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    .advantages {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main {
+        padding: 20px 0 35px;
+        &__inner {
+            flex-wrap: wrap;
+        }
+        &__left {
+            width: 100%;
+            margin: 20px 0 0;
+            order: 2;
+        }
+        &__items {
+            display: none;
+        }
+        .menu {
+            padding: 14px 0;
+            &__item {
+                border: none;
+                &-show {
+                    padding: 6px 22px;
+                    &::before {
+                        position: static;
+                        order: 2;
+                        transform: unset;
+                        margin-left: 6px;
+                        transform: rotate(90deg);
+                    }
+                }
+                &.nst-is-expanded .menu__item-show::before {
+                    transform: rotate(-90deg) translateX(-3px);
+                }
+            }
+            &__link {
+                padding-left: 50px;
+                &::before {
+                    left: 35px;
+                }
+            }
+        }
+    }
+    .about-index {
+        &__inner {
+            grid-template-columns: 1fr;
+            position: relative;
+            padding-top: 55px;
+        }
+        &__title {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        &__img {
+            order: -1;
+            img {
+                max-width: 500px;
+            }
+        }
+        &__text {
+            padding: 0;
+        }
+        &__desc {
+            margin: 0;
+        }
+        &__btn {
+            margin-top: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .news-index {
+        .news-card {
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .advantages {
+        margin-top: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        &__item {
+            &-icon {
+                width: 50px;
+                height: 50px;
+                margin-right: 15px;
+            }
+        }
+    }
+    .news-index {
+        &__link {
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .advantages {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 25px;
+    }
+    .news-index {
+        .news-card {
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+    .about-index {
+        &__btn {
+            width: 100%;
+        }
+    }
+}

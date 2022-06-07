@@ -1,0 +1,195 @@
+@import 'vars';
+@import 'components/text.scss';
+@import 'components/button.scss';
+@import 'components/fonts.scss';
+@import 'components/cards';
+input {
+    &::placeholder {
+        color: rgba($black, .3);
+    }
+}
+
+.custom-select,
+.form-group {
+    position: relative;
+    margin: 0;
+    input {
+        border: none;
+        border: 1px solid #F1F1F1;
+        padding: 0 20px;
+        height: 46px;
+        width: 100%;
+        font-size: 14px;
+        background-color: transparent;
+        color: $black;
+        border-radius: 6px;
+    }
+}
+
+.check {
+    position: relative;
+    input {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        cursor: pointer;
+        &:checked+label {
+            &::before {
+                border-color: #3C91E6;
+                background-image: url(../img/check.svg);
+            }
+        }
+        &:disabled+label {
+            color: #AAAAAA;
+            pointer-events: none;
+        }
+    }
+    label {
+        padding-left: 32px;
+        position: relative;
+        min-height: 20px;
+        font-size: 14px;
+        line-height: 157%;
+        cursor: pointer;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #F1F1F1;
+            border-radius: 4px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all .100s;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.custom-select {
+    position: relative;
+    input {
+        background-image: url(../img/select-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+        cursor: pointer;
+    }
+    &--active {
+        input {
+            background-image: url(../img/select-arrow2.svg);
+            background-position: right 12px top 20px;
+        }
+        .custom-select__dropdown {
+            display: block;
+        }
+    }
+    &__dropdown {
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        border: 1px solid #F1F1F1;
+        border-radius: 6px;
+        margin-top: 10px;
+        background-color: #fff;
+        overflow: hidden;
+        display: none;
+        z-index: 5;
+        &-inner {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        &-item {
+            padding: 6px 10px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            line-height: 157%;
+            transition: all .3s;
+            &:hover {
+                cursor: pointer;
+                color: $primary;
+            }
+            &--selected {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.pagination {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &__title {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 14px;
+        line-height: 157%;
+    }
+    &__btn {
+        &--prev {
+            margin-right: 16px;
+        }
+        &--next {
+            margin-left: 16px;
+        }
+    }
+    &__item {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 18px;
+        border-radius: 6px;
+        &--active {
+            pointer-events: none;
+            color: #FFFFFF;
+            background-image: $primary-gradient;
+        }
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .pagination {
+        flex-wrap: wrap;
+        &__title {
+            width: 100%;
+            position: static;
+            transform: unset;
+            color: #C4C4C4;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .pagination {
+        &__btn {
+            &--prev {
+                margin-right: auto;
+            }
+            &--next {
+                margin-left: auto;
+            }
+        }
+        &__item {
+            width: 33px;
+            height: 33px;
+            font-size: 14px;
+        }
+    }
+}

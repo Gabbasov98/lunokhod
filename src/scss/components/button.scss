@@ -1,0 +1,48 @@
+@import "../vars";
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-out .225s;
+    padding: 0;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-orange {
+    border-radius: 6px;
+    background-image: $primary-gradient;
+    color: #fff;
+    &:hover {
+        color: #fff;
+        background-image: $primary-gradient2;
+    }
+    &:active {
+        color: #fff;
+        background-image: $primary-gradient2;
+        opacity: 0.7;
+    }
+}
+
+.swiper {
+    &-button {
+        &-prev,
+        &-next {
+            background: #F1F1F1;
+            border: 1px solid #F1F1F1;
+            border-radius: 4px;
+            width: 28px;
+            height: 28px;
+            &:hover {
+                border-color: $primary;
+                svg {
+                    path {
+                        fill: $primary;
+                        fill-opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

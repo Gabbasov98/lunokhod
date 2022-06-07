@@ -1,0 +1,380 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Главная", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        @@include('components/page-blocks/_header.html')
+        <main class="content">
+
+            <section class='catalog'>
+                <div class='container'>
+                    <div class='catalog__inner'>
+                        <div class="catalog__sidebar">
+                            <div class="menu">
+                                @@include('components/menu/_menu.html')
+                            </div>
+
+                            <fieldset class='catalog__search form-group'>
+                                <input type='text' placeholder="Поиск по названию..." />
+                            </fieldset>
+
+                            <div class="filter">
+                                <div class="filter__top">
+                                    <div class="filter__top-title display2">Фильтры</div>
+                                    <button class="filter__close close-filter">
+                                        <img src="img/close.svg" alt="">
+                                    </button>
+                                </div>
+
+                                <div class="filter__group">
+                                    <div class="filter__title">Категории:</div>
+                                    <div class="filter__checks">
+                                        <div class="filter__check check">
+                                            <input checked type='radio' name="category" />
+                                            <label>Беспроводные</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='radio' name="category" />
+                                            <label>Проводные</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="filter__group">
+                                    <div class="filter__title">Цена</div>
+                                    <div class="filter__price range-slider">
+                                        <div class="range-slider__inputs">
+                                            <div class="range-slider__input">
+                                                <span>от</span>
+                                                <input class="" id="range-input1" type="number">
+                                            </div>
+                                            <div class="range-slider__input">
+                                                <span>до</span>
+                                                <input max="100000" id="range-input2" type="number">
+                                            </div>
+                                        </div>
+                                        <div class="range-slider__wrap">
+                                            <div class="range-slider" id="range"></div>
+                                        </div>
+                                        <div class="range-slider__bottom">
+                                            <div class="range-slider__price">
+                                                <span id="range-price1">125</span> р.
+                                            </div>
+                                            <div class="range-slider__price">
+                                                <span id="range-price2">1200</span> р.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="filter__group filter__group--has">
+                                    <div class="filter__title">В наличии:</div>
+                                    <div class="filter__check check">
+                                        <input type='checkbox' />
+                                        <label></label>
+                                    </div>
+                                </div>
+
+                                <div class="filter__group">
+                                    <div class="filter__title">Бренд:</div>
+                                    <div class="filter__checks">
+                                        <div class="filter__check check">
+                                            <input checked type='checkbox' />
+                                            <label>Apple</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>Ritmix</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>Sony</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>Canyon</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>JBL</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>Evolution</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>Xiaomi</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>Miru</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="filter__group">
+                                    <div class="filter__title">Цвет:</div>
+                                    <div class="filter__checks">
+                                        <div class="filter__check check">
+                                            <input checked type='checkbox' />
+                                            <label>бежевый</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>красный</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>белый</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>оранжевый</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>бирюзовый</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>розовый</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>голубой</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>серебристый</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>желтый</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>серый</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>зеленый</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>синий</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>золотистый</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>фиолетовый</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>коричневый</label>
+                                        </div>
+                                        <div class="filter__check check">
+                                            <input type='checkbox' />
+                                            <label>черный</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="filter__reset btn" type="reset">Сбросить</button>
+                            </div>
+
+                            <div class="filter__bg close-filter"></div>
+                        </div>
+                        <div class="catalog__content">
+                            @@include('components/page-blocks/_breadcrumbs.html',{"second":"Каталог","third":"Беспроводные наушники","fourth":""})
+                            <h1 class="catalog__title display1">Беспроводные наушники</h1>
+                            <div class="popular">
+                                <div class="popular__title">Популярное:</div>
+                                <div class="popular__wrap">
+                                    <a href="" class="popular__item">APPLE</a>
+                                    <a href="" class="popular__item">xiaomi</a>
+                                    <a href="" class="popular__item">SAMSUNG</a>
+                                    <a href="" class="popular__item">JBL Tune 125 TWS</a>
+                                    <a href="" class="popular__item">SONY</a>
+                                    <a href="" class="popular__item">CANON</a>
+                                    <a href="" class="popular__item">NIKON</a>
+                                    <a href="" class="popular__item">FUJIFILM</a>
+                                    <a href="" class="popular__item">OCULUS</a>
+                                </div>
+                            </div>
+
+                            <button class="catalog__filter-btn btn btn-orange">
+                                <span>Фильтры</span>
+                                <img src="img/filter.svg" alt="">
+                            </button>
+
+                            <div class="catalog__nav">
+                                <div class="catalog__nav-item">
+                                    <div class="catalog__nav-title">Сортировка по:</div>
+                                    <div class="catalog__nav-select1 custom-select">
+                                        <input readonly type="text">
+                                        <div class="custom-select__dropdown">
+                                            <div class="custom-select__dropdown-inner">
+                                                <div class="custom-select__dropdown-item custom-select__dropdown-item--selected">Популярности</div>
+                                                <div class="custom-select__dropdown-item">Цене</div>
+                                                <div class="custom-select__dropdown-item">Скидка</div>
+                                                <div class="custom-select__dropdown-item">Акции</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__nav-item catalog__nav-num">
+                                    <div class="catalog__nav-title">На странице:</div>
+                                    <div class="catalog__nav-select2 custom-select">
+                                        <input readonly type="text">
+                                        <div class="custom-select__dropdown">
+                                            <div class="custom-select__dropdown-inner">
+                                                <div class="custom-select__dropdown-item custom-select__dropdown-item--selected">16</div>
+                                                <div class="custom-select__dropdown-item">32</div>
+                                                <div class="custom-select__dropdown-item">64</div>
+                                                <div class="custom-select__dropdown-item">128</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="catalog__items">
+                                <div class="catalog-card">
+                                    <div class="catalog-card__badges">
+                                        <div class="catalog-card__badge">Новинка</div>
+                                    </div>
+                                    @@include('components/cards/_catalog-card.html',{"img":"catalog","title":"Беспроводные наушники Apple AirPods Pro MWP22","price":"777.00 руб."})
+                                </div>
+                                <div class="catalog-card">
+                                    <div class="catalog-card__badges">
+                                        <div class="catalog-card__badge catalog-card__badge--red">Скидка</div>
+                                    </div>
+                                    @@include('components/cards/_catalog-card.html',{"img":"catalog2","title":"Ноутбук Apple MacBook Air 13 2020 Space Gray","price":"3280.00 руб."})
+                                </div>
+                                <div class="catalog-card">
+                                    <div class="catalog-card__badges">
+                                        <div class="catalog-card__badge catalog-card__badge--orange">Акция</div>
+                                    </div>
+                                    @@include('components/cards/_catalog-card.html',{"img":"catalog3","title":"Умные часы Apple Watch Series 7 GPS 45mm ","price":"1054.00 руб."})
+                                </div>
+                                <div class="catalog-card">
+                                    <div class="catalog-card__badges">
+                                        <div class="catalog-card__badge catalog-card__badge--green">Хит продаж</div>
+                                    </div>
+                                    @@include('components/cards/_catalog-card.html',{"img":"catalog4","title":"Беззеркальный фотоаппарат Sony Alpha","price":"2546.00 руб."})
+                                </div>
+                                <div class="catalog-card">
+                                    <div class="catalog-card__badges">
+                                        <div class="catalog-card__badge catalog-card__badge--red">12%</div>
+                                        <div class="catalog-card__badge">Новинка</div>
+                                    </div>
+                                    @@include('components/cards/_catalog-card.html',{"img":"catalog","title":"Беспроводные наушники Apple AirPods Pro MWP22","price":"777.00 руб."})
+                                </div>
+                                <div class="catalog-card">
+                                    <div class="catalog-card__top">
+                                        <a href="" class="catalog-card__img">
+                                            <img src="img/catalog2.webp" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="catalog-card__bottom">
+                                        <a href="" class="catalog-card__title">Ноутбук Apple MacBook Air 13 2020 Space Gray</a>
+                                        <div class="catalog-card__has catalog-card__has--no">
+                                            <img src="img/correct2.svg" alt="">
+                                            <span>Нет в наличии</span>
+                                        </div>
+                                        <div class="catalog-card__price">3280.00 руб..</div>
+                                        <button class="catalog-card__btn btn btn-orange">
+                                            <span>В корзину</span>
+                                            <img src="img/cart.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="catalog-card">
+                                    @@include('components/cards/_catalog-card.html',{"img":"catalog3","title":"Умные часы Apple Watch Series 7 GPS 45mm ","price":"1054.00 руб."})
+                                </div>
+                                <div class="catalog-card">
+                                    @@include('components/cards/_catalog-card.html',{"img":"catalog4","title":"Беззеркальный фотоаппарат Sony Alpha","price":"2546.00 руб."})
+                                </div>
+                                <div class="catalog-card">
+                                    @@include('components/cards/_catalog-card.html',{"img":"catalog","title":"Беспроводные наушники Apple AirPods Pro MWP22","price":"777.00 руб."})
+                                </div>
+                                <div class="catalog-card">
+                                    @@include('components/cards/_catalog-card.html',{"img":"catalog2","title":"Ноутбук Apple MacBook Air 13 2020 Space Gray","price":"3280.00 руб."})
+                                </div>
+                                <div class="catalog-card">
+                                    @@include('components/cards/_catalog-card.html',{"img":"catalog3","title":"Умные часы Apple Watch Series 7 GPS 45mm ","price":"1054.00 руб."})
+                                </div>
+                                <div class="catalog-card">
+                                    @@include('components/cards/_catalog-card.html',{"img":"catalog4","title":"Беззеркальный фотоаппарат Sony Alpha","price":"2546.00 руб."})
+                                </div>
+                                <div class="catalog-card">
+                                    @@include('components/cards/_catalog-card.html',{"img":"catalog","title":"Беспроводные наушники Apple AirPods Pro MWP22","price":"777.00 руб."})
+                                </div>
+                                <div class="catalog-card">
+                                    @@include('components/cards/_catalog-card.html',{"img":"catalog2","title":"Ноутбук Apple MacBook Air 13 2020 Space Gray","price":"3280.00 руб."})
+                                </div>
+                                <div class="catalog-card">
+                                    @@include('components/cards/_catalog-card.html',{"img":"catalog3","title":"Умные часы Apple Watch Series 7 GPS 45mm ","price":"1054.00 руб."})
+                                </div>
+                                <div class="catalog-card">
+                                    @@include('components/cards/_catalog-card.html',{"img":"catalog4","title":"Беззеркальный фотоаппарат Sony Alpha","price":"2546.00 руб."})
+                                </div>
+                            </div>
+
+                            <div class="pagination">
+                                <div class="pagination__title">Показано 1-16 из 320</div>
+                                <a href="" class="pagination__btn pagination__btn--prev">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="7.07031" y="14.1421" width="10" height="1.66667" transform="rotate(-135 7.07031 14.1421)" fill="url(#paint0_linear_322_12802)"/>
+                                        <rect y="7.07104" width="10" height="1.66667" transform="rotate(-45 0 7.07104)" fill="url(#paint1_linear_322_12802)"/>
+                                        <defs>
+                                        <linearGradient id="paint0_linear_322_12802" x1="12.0703" y1="14.1421" x2="12.0703" y2="15.8088" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#F89D33"/>
+                                        <stop offset="1" stop-color="#F87933"/>
+                                        </linearGradient>
+                                        <linearGradient id="paint1_linear_322_12802" x1="5" y1="7.07104" x2="5" y2="8.73771" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#F89D33"/>
+                                        <stop offset="1" stop-color="#F87933"/>
+                                        </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </a>
+                                <a href="" class="pagination__item pagination__item--active">1</a>
+                                <a href="" class="pagination__item">2</a>
+                                <a href="" class="pagination__item">3</a>
+                                <a href="" class="pagination__item">4</a>
+                                <a href="" class="pagination__item">...</a>
+                                <a href="" class="pagination__item">10</a>
+                                <a href="" class="pagination__btn pagination__btn--next">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="10" height="1.66667" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 7.57031 14.1421)" fill="url(#paint0_linear_322_12803)"/>
+                                        <rect width="10" height="1.66667" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 14.6406 7.07104)" fill="url(#paint1_linear_322_12803)"/>
+                                        <defs>
+                                        <linearGradient id="paint0_linear_322_12803" x1="5" y1="0" x2="5" y2="1.66667" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#F89D33"/>
+                                        <stop offset="1" stop-color="#F87933"/>
+                                        </linearGradient>
+                                        <linearGradient id="paint1_linear_322_12803" x1="5" y1="0" x2="5" y2="1.66667" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#F89D33"/>
+                                        <stop offset="1" stop-color="#F87933"/>
+                                        </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        @@include('components/page-blocks/_footer.html')
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>
