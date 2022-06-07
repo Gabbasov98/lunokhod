@@ -42,14 +42,19 @@ let filterToggleBtn = document.querySelector(".catalog__filter-btn")
 let filterClose = document.querySelectorAll(".close-filter")
 let filter = document.querySelector(".filter")
 
-filterToggleBtn.onclick = function() {
-    filter.classList.add("filter--active")
-    document.querySelector("body").classList.add("fixed-body")
+if (filterToggleBtn) {
+    filterToggleBtn.onclick = function() {
+        filter.classList.add("filter--active")
+        document.querySelector("body").classList.add("fixed-body")
+    }
 }
 
-filterClose.forEach(el => {
-    el.onclick = function() {
-        filter.classList.remove("filter--active")
-        document.querySelector("body").classList.remove("fixed-body")
-    }
-})
+
+if (filterClose) {
+    filterClose.forEach(el => {
+        el.onclick = function() {
+            filter.classList.remove("filter--active")
+            document.querySelector("body").classList.remove("fixed-body")
+        }
+    })
+}

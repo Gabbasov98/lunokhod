@@ -22,7 +22,9 @@ document.addEventListener('click', (e) => {
 
 headerMenuBtn.onclick = function() {
     header.classList.toggle("header--menu-show")
-    body.classList.toggle("fixed-body")
+    if (window.innerWidth < 992) {
+        body.classList.toggle("fixed-body")
+    }
 }
 
 headerMenuBackdrop.onclick = function() {
