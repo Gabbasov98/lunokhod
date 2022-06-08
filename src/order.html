@@ -1,0 +1,158 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Оформление заказа", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        @@include('components/page-blocks/_header.html')
+        <main class="content">
+
+            <section class='order'>
+                <div class='container'>
+                    @@include('components/page-blocks/_breadcrumbs.html',{"second":"Корзина","third":"Оформление заказа","fourth":""})
+                    <h1 class="order__title display1">Оформление заказа</h1>
+
+                    <div class="order__items">
+                        <div class="cart-card">
+                            @@include('components/cards/_cart-card.html',{"title":"Беспроводные наушники Apple AirPods Pro MWP22","img":"catalog"})
+                        </div>
+                        <div class="cart-card">
+                            @@include('components/cards/_cart-card.html',{"title":"Беспроводные наушники Apple AirPods Pro MWP22","img":"catalog2"})
+                        </div>
+                    </div>
+
+                    <form action="" class="order-form">
+                        <div class="order-form__top">
+                            <div class="order-form__title">Итоговая стоимость:</div>
+                            <div class="order-form__sum">8575.00 руб.</div>
+                        </div>
+
+                        <div class="order-form__grid">
+                            <div class="order-form__group">
+                                <div class="order-form__subtitle">Контактные данные</div>
+                                <div class="order-form__fields">
+                                    <fieldset class='form-group form-group--required'>
+                                        <label>Имя Фамилия</label>
+                                        <input type='text' placeholder="Введите имя и фамилию" />
+                                    </fieldset>
+                                    <fieldset class='form-group form-group--required'>
+                                        <label>Email</label>
+                                        <input type='text' placeholder="@" />
+                                    </fieldset>
+                                    <fieldset class='form-group form-group--required'>
+                                        <label>Телефон</label>
+                                        <input type='text' placeholder="+" />
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="order-form__group">
+                                <div class="order-form__subtitle">Контактные данные</div>
+                                <div class="order-form__fields">
+                                    <fieldset class='custom-select form-group--required'>
+                                        <label>Город</label>
+                                        <input readonly type="text" placeholder="- Выберите город - ">
+                                        <div class="custom-select__dropdown">
+                                            <div class="custom-select__dropdown-inner">
+                                                <div class="custom-select__dropdown-item">Минск</div>
+                                                <div class="custom-select__dropdown-item">Гомель</div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <div class="order-form__address">
+                                        <fieldset class='form-group form-group--required'>
+                                            <label>Улица</label>
+                                            <input type='text' placeholder="- Выберите улицу - " />
+                                        </fieldset>
+                                        <fieldset class='form-group form-group--required'>
+                                            <label>Дом</label>
+                                            <input type='text' />
+                                        </fieldset>
+                                        <fieldset class='form-group'>
+                                            <label>Корпус</label>
+                                            <input type='text' />
+                                        </fieldset>
+                                        <fieldset class='form-group form-group--required'>
+                                            <label>Квартира</label>
+                                            <input type='text' />
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-form__group">
+                                <div class="order-form__subtitle">Доставка</div>
+                                <div class="order-form__fields">
+                                    <div class="order-form__radio order-form__radio2">
+                                        <div class="order-form__radio-top">
+                                            <span class="order-form__radio-title">Курьером по Минску</span>
+                                            <span class="order-form__radio-free">Бесплатно</span>
+                                        </div>
+                                        <div class="order-form__radio-desc">Привезём заказ в любую точку столицы в пределах МКАД и ближайшей области</div>
+                                        <input checked type='radio' name="delivery" />
+                                        <label></label>
+                                    </div>
+                                    <div class="order-form__radio order-form__radio2">
+                                        <div class="order-form__radio-top">
+                                            <span class="order-form__radio-title">Самовывоз</span>
+                                            <span class="order-form__radio-free">Бесплатно</span>
+                                        </div>
+                                        <div class="order-form__radio-desc">Самостоятельно забрать заказ с 10.00 до 20.00, адресу: г.Минск, ул. Уличная, д.28</div>
+                                        <input type='radio' name="delivery" />
+                                        <label></label>
+                                    </div>
+                                    <div class="order-form__radio order-form__radio2">
+                                        <div class="order-form__radio-top">
+                                            <span class="order-form__radio-title">По Беларуси</span>
+                                            <span class="order-form__radio-free">20.00 руб</span>
+                                        </div>
+                                        <div class="order-form__radio-desc">Доставка транспортной компанией по всем городам страны</div>
+                                        <input type='radio' name="delivery" />
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-form__group">
+                                <div class="order-form__subtitle">Способ оплаты</div>
+                                <div class="order-form__fields">
+                                    <div class="order-form__radio">
+                                        <div class="order-form__radio-top">
+                                            <span class="order-form__radio-title">Наличными</span>
+                                        </div>
+                                        <div class="order-form__radio-desc">Оплата производится наличными курьеру при получении товара</div>
+                                        <input checked type='radio' name="payWay" />
+                                        <label></label>
+                                    </div>
+                                    <div class="order-form__radio">
+                                        <div class="order-form__radio-top">
+                                            <span class="order-form__radio-title">Картой при получении</span>
+                                        </div>
+                                        <div class="order-form__radio-desc">Оплата производится картой курьеру при получении товара</div>
+                                        <input type='radio' name="payWay" />
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-form__comment">
+                            <div class="order-form__subtitle order-form__comment-title">Комментарии к заказу</div>
+                            <fieldset class='form-group'>
+                                <textarea placeholder="Напишите комментарий"></textarea>
+                            </fieldset>
+                        </div>
+
+                        <div class="order-form__all">
+                            <span class="order-form__all-title">Итоговая стоимость:</span>
+                            <span class="order-form__all-sum">8575.00 руб.</span>
+                        </div>
+
+                        <button class="order-form__btn btn btn-orange">Оформить заказ</button>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+        @@include('components/page-blocks/_footer.html')
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<div class="menu">
+    @@include('../menu/_menu.html')
+</div>
+
+<fieldset class='catalog__search form-group'>
+    <input type='text' placeholder="Поиск по названию..." />
+</fieldset>
+
+<div class="filter">
+    <div class="filter__top">
+        <div class="filter__top-title display2">Фильтры</div>
+        <button class="filter__close close-filter">
+            <img src="img/close.svg" alt="">
+        </button>
+    </div>
+
+    <div class="filter__group">
+        <div class="filter__title">Категории:</div>
+        <div class="filter__checks filter__checks--row">
+            <div class="filter__check check">
+                <input checked type='radio' name="category" />
+                <label>Беспроводные</label>
+            </div>
+            <div class="filter__check check">
+                <input type='radio' name="category" />
+                <label>Проводные</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="filter__group">
+        <div class="filter__title">Цена</div>
+        <div class="filter__price range-slider">
+            <div class="range-slider__inputs">
+                <div class="range-slider__input">
+                    <span>от</span>
+                    <input class="" id="range-input1" type="number">
+                </div>
+                <div class="range-slider__input">
+                    <span>до</span>
+                    <input max="100000" id="range-input2" type="number">
+                </div>
+            </div>
+            <div class="range-slider__wrap">
+                <div class="range-slider" id="range"></div>
+            </div>
+            <div class="range-slider__bottom">
+                <div class="range-slider__price">
+                    <span id="range-price1">125</span> р.
+                </div>
+                <div class="range-slider__price">
+                    <span id="range-price2">1200</span> р.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="filter__group filter__group--has">
+        <div class="filter__title">В наличии:</div>
+        <div class="filter__check check">
+            <input type='checkbox' />
+            <label></label>
+        </div>
+    </div>
+
+    <div class="filter__group">
+        <div class="filter__title">Бренд:</div>
+        <div class="filter__checks">
+            <div class="filter__check check">
+                <input checked type='checkbox' />
+                <label>Apple</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>Ritmix</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>Sony</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>Canyon</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>JBL</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>Evolution</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>Xiaomi</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>Miru</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="filter__group">
+        <div class="filter__title">Цвет:</div>
+        <div class="filter__checks">
+            <div class="filter__check check">
+                <input checked type='checkbox' />
+                <label>бежевый</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>красный</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>белый</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>оранжевый</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>бирюзовый</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>розовый</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>голубой</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>серебристый</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>желтый</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>серый</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>зеленый</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>синий</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>золотистый</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>фиолетовый</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>коричневый</label>
+            </div>
+            <div class="filter__check check">
+                <input type='checkbox' />
+                <label>черный</label>
+            </div>
+        </div>
+    </div>
+
+    <button class="filter__reset btn" type="reset">Сбросить</button>
+</div>
+
+<div class="filter__bg close-filter"></div>

@@ -124,21 +124,6 @@
     }
 }
 
-.news {
-    &__wrap {
-        margin-top: 24px;
-        display: grid;
-        grid-template-columns: repeat(3, calc((100% / 3) - 16px));
-        gap: 24px;
-        @media screen and (max-width: 850px) {
-            grid-template-columns: repeat(2, calc(50% - 12px));
-        }
-        @media screen and (max-width: 576px) {
-            grid-template-columns: 100%;
-        }
-    }
-}
-
 .about-index {
     padding: 44px 0 48px;
     &__inner {

@@ -25,6 +25,38 @@
     }
 }
 
+.btn-orange-outline {
+    font-weight: 400;
+    font-size: 16px;
+    border: 1px solid $primary;
+    color: $primary;
+    &:hover {
+        color: #fff;
+        background-image: $primary-gradient2;
+        path {
+            fill: #fff;
+        }
+    }
+    &:active {
+        opacity: 0.7;
+    }
+}
+
+.btn-blue-outline {
+    border: 1px solid $blue;
+    color: $blue;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 14px;
+    &:hover {
+        background-color: $blue;
+        color: #fff;
+    }
+    &:active {
+        opacity: 0.7;
+    }
+}
+
 .swiper {
     &-button {
         &-prev,

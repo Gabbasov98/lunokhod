@@ -1,0 +1,118 @@
+<div class="modal fade" id="quickOrder" aria-hidden="true">
+    <div class="modal-dialog">
+        <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.2">
+                <rect x="7.57129" y="5.65686" width="18" height="2" transform="rotate(45 7.57129 5.65686)" fill="#1D1D1D"/>
+                <rect x="20.2998" y="7.07104" width="18" height="2" transform="rotate(135 20.2998 7.07104)" fill="#1D1D1D"/>
+                </g>
+            </svg>
+        </button>
+
+        <div class="modal__title display2">Покупка в 1 клик</div>
+        <div class="modal__orders">
+            <div class="cart-card">
+                @@include('cards/_cart-card.html',{"title":"Беспроводные наушники Apple AirPods Pro MWP22","img":"catalog"})
+            </div>
+        </div>
+        <div class="modal__all">
+            <span class="modal__all-title">Итого:</span>
+            <span class="modal__all-price">8575.00 руб.</span>
+        </div>
+
+        <form action="" class="modal__form">
+            <div class="modal__form-grid">
+                <fieldset class='form-group'>
+                    <label>Имя</label>
+                    <input type='text' placeholder="Введите Ваше имя" />
+                </fieldset>
+                <fieldset class='form-group'>
+                    <label>Телефон</label>
+                    <input type='text' placeholder="+" />
+                </fieldset>
+            </div>
+            <div class="modal__buttons">
+                <button class="modal__btn btn btn-orange-outline">Вернуться к покупкам</button>
+                <button class="modal__btn btn btn-orange">Оформить заказ</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="cartModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.2">
+                <rect x="7.57129" y="5.65686" width="18" height="2" transform="rotate(45 7.57129 5.65686)" fill="#1D1D1D"/>
+                <rect x="20.2998" y="7.07104" width="18" height="2" transform="rotate(135 20.2998 7.07104)" fill="#1D1D1D"/>
+                </g>
+            </svg>
+        </button>
+
+        <div class="modal__title display2">Корзина </div>
+        <div class="modal__badge">
+            <div class="modal__has">
+                Товар <a href="">Беспроводные наушники Apple AirPods Pro MWP22</a> добавлен в корзину покупок!
+            </div>
+        </div>
+        <div class="modal__orders">
+            <div class="cart-card">
+                @@include('cards/_cart-card.html',{"title":"Беспроводные наушники Apple AirPods Pro MWP22","img":"catalog"})
+            </div>
+            <div class="cart-card">
+                @@include('cards/_cart-card.html',{"title":"Беспроводные наушники Apple AirPods Pro MWP22","img":"catalog2"})
+            </div>
+        </div>
+        <div class="modal__all">
+            <span class="modal__all-title">Итого:</span>
+            <span class="modal__all-price">8575.00 руб.</span>
+        </div>
+
+        <div class="modal__buttons2">
+            <button class="modal__btn btn btn-orange-outline">Вернуться к покупкам</button>
+            <button class="modal__btn btn btn-orange-outline">Перейти в корзину</button>
+            <button class="modal__btn btn btn-orange">Оформить заказ</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="cartModal2" aria-hidden="true">
+    <div class="modal-dialog">
+        <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.2">
+                <rect x="7.57129" y="5.65686" width="18" height="2" transform="rotate(45 7.57129 5.65686)" fill="#1D1D1D"/>
+                <rect x="20.2998" y="7.07104" width="18" height="2" transform="rotate(135 20.2998 7.07104)" fill="#1D1D1D"/>
+                </g>
+            </svg>
+        </button>
+
+        <div class="modal__title display2">Корзина </div>
+        <div class="modal__badge">
+            Ваша корзина пуста.
+        </div>
+
+    </div>
+</div>
+
+<div class="modal fade succes-modal" id="succesModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.2">
+                <rect x="7.57129" y="5.65686" width="18" height="2" transform="rotate(45 7.57129 5.65686)" fill="#1D1D1D"/>
+                <rect x="20.2998" y="7.07104" width="18" height="2" transform="rotate(135 20.2998 7.07104)" fill="#1D1D1D"/>
+                </g>
+            </svg>
+        </button>
+
+        <div class="succes-modal__title">
+            <img src="img/correct.svg" alt="">
+            <span>Спасибо! <br> Ваш заявка успешно отправлена!</span>
+        </div>
+        <div class="succes-modal__desc">В ближайшее время наш менеджер свяжется с Вами.</div>
+    </div>
+</div>
+
+<!-- <div class="modal-backdrop show"></div> -->

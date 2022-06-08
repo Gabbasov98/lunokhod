@@ -2,8 +2,8 @@
 @import 'components/text.scss';
 @import 'components/button.scss';
 @import 'components/fonts.scss';
-@import 'components/cards';
-input {
+input,
+textarea {
     &::placeholder {
         color: rgba($black, .3);
     }
@@ -13,6 +13,7 @@ input {
 .form-group {
     position: relative;
     margin: 0;
+    textarea,
     input {
         border: none;
         border: 1px solid #F1F1F1;
@@ -23,6 +24,26 @@ input {
         background-color: transparent;
         color: $black;
         border-radius: 6px;
+    }
+    textarea {
+        resize: none;
+        min-height: 104px;
+        padding: 12px 24px;
+    }
+    label {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 167%;
+        display: block;
+        margin-bottom: 8px;
+    }
+    &--required {
+        label {
+            &::after {
+                content: "*";
+                color: $red;
+            }
+        }
     }
 }
 
@@ -159,6 +180,19 @@ input {
             color: #FFFFFF;
             background-image: $primary-gradient;
         }
+    }
+}
+
+.cartcalc {
+    width: 144px;
+    display: flex;
+    align-items: center;
+    input {
+        flex-grow: 1;
+        margin: 0 16px;
+        padding: 0;
+        text-align: center;
+        font-size: 16px;
     }
 }
 

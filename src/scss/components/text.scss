@@ -19,6 +19,31 @@ p {
     }
 }
 
+ul {
+    padding-left: 10px;
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    li {
+        font-size: 14px;
+        line-height: 157%;
+        position: relative;
+        padding-left: 16px;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            background-color: $black;
+            border-radius: 50%;
+            width: 4px;
+            height: 4px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     .display1 {
         font-size: 20px;
