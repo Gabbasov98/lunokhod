@@ -21,6 +21,11 @@ function catalogGallery() {
         thumbs: {
             swiper: swiper,
         },
+        pagination: {
+            el: '.catalog-gallery .swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
     });
 }
 

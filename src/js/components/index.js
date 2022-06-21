@@ -34,5 +34,22 @@ function projectsSliders() {
 
 }
 
+function mainSlider() {
+    var swiper = new Swiper('.main .swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        pagination: {
+            el: '.main .swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+    })
+}
+
 
 projectsSliders()
+mainSlider()

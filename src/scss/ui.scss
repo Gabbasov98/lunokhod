@@ -196,6 +196,25 @@ textarea {
     }
 }
 
+.swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-bullet {
+        background: #F1F1F1;
+        opacity: 1;
+        margin: 0 3.5px !important;
+        width: 5px;
+        height: 5px;
+        &-active {
+            width: 20px;
+            height: 5px;
+            border-radius: 14px;
+            background-color: $primary;
+        }
+    }
+}
+
 @media screen and (max-width: 1150px) {
     .pagination {
         flex-wrap: wrap;

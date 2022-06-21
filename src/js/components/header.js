@@ -49,19 +49,14 @@ if (header) {
     fixHeader()
     window.onscroll = function() {
         fixHeader()
+        fixMobHeader()
     }
 }
 
 
 function fixHeader() {
     if (window.innerWidth < 992) {
-        if (window.scrollY > 80) {
-            header.classList.add("header--fix")
-            headerNav.classList.add("header-nav--fix")
-        } else {
-            header.classList.remove("header--fix")
-            headerNav.classList.remove("header-nav--fix")
-        }
+
     } else {
         if (window.scrollY > 150) {
             header.classList.add("header--fix")
@@ -72,10 +67,23 @@ function fixHeader() {
 
 }
 
+var scrollPos = 0;
+
+function fixMobHeader() {
+    if (window.scrollY > scrollPos) {
+        header.classList.add("header--fix")
+        headerNav.classList.add("header-nav--fix")
+    } else {
+        header.classList.remove("header--fix")
+        headerNav.classList.remove("header-nav--fix")
+    }
+    scrollPos = window.scrollY
+}
+
 let catalogToggler = document.querySelector(".header__catalog-toggler")
 
-if (catalogToggler) {
-    catalogToggler.onclick = function() {
+if (headerBurger) {
+    headerBurger.onclick = function() {
         header.classList.toggle("header--menu-show")
 
         if (headerNav.classList.contains("header-nav--active")) {
@@ -89,8 +97,8 @@ if (catalogToggler) {
     }
 }
 
-if (headerBurger) {
-    headerBurger.onclick = function() {
+if (catalogToggler) {
+    catalogToggler.onclick = function() {
         headerNav.classList.toggle("header-nav--active")
         if (header.classList.contains("header--menu-show")) {
             body.classList.add("fixed-body")
@@ -98,6 +106,5 @@ if (headerBurger) {
         } else {
             body.classList.toggle("fixed-body")
         }
-
     }
 }
