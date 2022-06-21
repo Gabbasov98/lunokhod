@@ -89,14 +89,15 @@ if (catalogToggler) {
     }
 }
 
+if (headerBurger) {
+    headerBurger.onclick = function() {
+        headerNav.classList.toggle("header-nav--active")
+        if (header.classList.contains("header--menu-show")) {
+            body.classList.add("fixed-body")
+            header.classList.remove("header--menu-show")
+        } else {
+            body.classList.toggle("fixed-body")
+        }
 
-headerBurger.onclick = function() {
-    headerNav.classList.toggle("header-nav--active")
-    if (header.classList.contains("header--menu-show")) {
-        body.classList.add("fixed-body")
-        header.classList.remove("header--menu-show")
-    } else {
-        body.classList.toggle("fixed-body")
     }
-
 }

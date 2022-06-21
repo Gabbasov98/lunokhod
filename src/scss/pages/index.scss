@@ -92,10 +92,8 @@
         }
         &-slide {
             height: auto;
-            @media screen and (min-width: 768px) {
-                opacity: 0;
-                pointer-events: none;
-            }
+            opacity: 0;
+            pointer-events: none;
             &-next+.swiper-slide+.swiper-slide+.swiper-slide {
                 @media screen and (min-width: 1150px) {
                     opacity: 1;
