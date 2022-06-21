@@ -5,6 +5,8 @@ let header = document.querySelector(".header")
 let headerMenu = document.querySelector(".header .menu")
 let headerMenuBtn = document.querySelector(".header__btn")
 let headerMenuBackdrop = document.querySelector(".header .menu__backdrop")
+let headerNav = document.querySelector(".header-nav")
+let headerBurger = document.querySelector(".header__burger")
 
 
 if (socialsToggler) {
@@ -25,6 +27,9 @@ if (socialsToggler) {
 
 if (headerMenuBtn) {
     headerMenuBtn.onclick = function() {
+        if (this.classList.contains('header__btn--link')) {
+            return
+        }
         header.classList.toggle("header--menu-show")
         if (window.innerWidth < 992) {
             body.classList.toggle("fixed-body")
@@ -50,23 +55,48 @@ if (header) {
 
 function fixHeader() {
     if (window.innerWidth < 992) {
-        return
-    }
-    if (window.scrollY > 150) {
-        header.classList.add("header--fix")
+        if (window.scrollY > 80) {
+            header.classList.add("header--fix")
+            headerNav.classList.add("header-nav--fix")
+        } else {
+            header.classList.remove("header--fix")
+            headerNav.classList.remove("header-nav--fix")
+        }
     } else {
-        header.classList.remove("header--fix")
+        if (window.scrollY > 150) {
+            header.classList.add("header--fix")
+        } else {
+            header.classList.remove("header--fix")
+        }
     }
 
 }
 
+let catalogToggler = document.querySelector(".header__catalog-toggler")
 
-let headerSearch = document.querySelector(".header__search")
-let headerSearchBtn = document.querySelector(".header__toggle-search")
+if (catalogToggler) {
+    catalogToggler.onclick = function() {
+        header.classList.toggle("header--menu-show")
 
-if (headerSearchBtn) {
-    headerSearchBtn.onclick = function() {
-        headerSearchBtn.classList.toggle("header__toggle-search--active")
-        headerSearch.classList.toggle("header__search--active")
+        if (headerNav.classList.contains("header-nav--active")) {
+            body.classList.add("fixed-body")
+            headerNav.classList.remove("header-nav--active")
+        } else {
+            body.classList.toggle("fixed-body")
+        }
+
+
     }
+}
+
+
+headerBurger.onclick = function() {
+    headerNav.classList.toggle("header-nav--active")
+    if (header.classList.contains("header--menu-show")) {
+        body.classList.add("fixed-body")
+        header.classList.remove("header--menu-show")
+    } else {
+        body.classList.toggle("fixed-body")
+    }
+
 }

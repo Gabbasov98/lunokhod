@@ -1,11 +1,3 @@
-<div class="menu">
-    @@include('../menu/_menu.html')
-</div>
-
-<fieldset class='catalog__search form-group'>
-    <input type='text' placeholder="Поиск по названию..." />
-</fieldset>
-
 <div class="filter">
     <div class="filter__top">
         <div class="filter__top-title display2">Фильтры</div>
@@ -171,7 +163,11 @@
         </div>
     </div>
 
-    <button class="filter__reset btn" type="reset">Сбросить</button>
+    <div class="filter__bottom">
+        <button class="filter__apply btn btn-orange">Показать</button>
+        <button class="filter__reset btn" type="reset">Сбросить</button>
+    </div>
+
 </div>
 
 <div class="filter__bg close-filter"></div>

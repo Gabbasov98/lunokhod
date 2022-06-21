@@ -15,13 +15,12 @@ function projectsSliders() {
             },
             breakpoints: {
                 320: {
-                    slidesPerView: 1,
-                },
-                500: {
                     slidesPerView: 2,
+                    spaceBetween: 10,
                 },
                 768: {
                     slidesPerView: 3,
+                    spaceBetween: 24,
                 },
                 992: {
                     slidesPerView: 4,

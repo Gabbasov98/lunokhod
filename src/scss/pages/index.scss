@@ -26,6 +26,9 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
         margin-top: 24px;
+        &-title {
+            display: none;
+        }
     }
     &__item {
         display: flex;
@@ -73,6 +76,7 @@
 
 .collection {
     padding: 36px 0;
+    overflow: hidden;
     &__top {
         display: flex;
         align-items: center;
@@ -83,14 +87,38 @@
         align-items: center;
     }
     .swiper {
-        &-container {
-            overflow: hidden;
-        }
         &-wrapper {
             align-items: stretch;
         }
         &-slide {
             height: auto;
+            @media screen and (min-width: 768px) {
+                opacity: 0;
+                pointer-events: none;
+            }
+            &-next+.swiper-slide+.swiper-slide+.swiper-slide {
+                @media screen and (min-width: 1150px) {
+                    opacity: 1;
+                    pointer-events: unset;
+                }
+            }
+            &-next+.swiper-slide+.swiper-slide {
+                @media screen and (min-width: 992px) {
+                    opacity: 1;
+                    pointer-events: unset;
+                }
+            }
+            &-next+.swiper-slide,
+            &-next {
+                @media screen and (min-width: 768px) {
+                    opacity: 1;
+                    pointer-events: unset;
+                }
+            }
+            &-active {
+                opacity: 1;
+                pointer-events: unset;
+            }
         }
         &-button {
             &-prev,
@@ -174,17 +202,39 @@
 
 @media screen and (max-width: 992px) {
     .main {
-        padding: 20px 0 35px;
+        padding: 20px 0 25px;
         &__inner {
             flex-wrap: wrap;
         }
         &__left {
-            width: 100%;
-            margin: 20px 0 0;
-            order: 2;
+            display: none;
         }
         &__items {
-            display: none;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 8px;
+            margin: 0;
+            &-title {
+                display: block;
+                margin: 20px 0;
+            }
+        }
+        &__item {
+            flex-direction: column;
+            align-items: center;
+            padding: 12px 8px;
+            height: unset;
+            text-align: center;
+            img {
+                height: 55px;
+                width: auto;
+                margin: 0;
+            }
+            span {
+                font-size: 9.62935px;
+                line-height: 16px;
+                padding-top: 10px;
+                margin-top: auto;
+            }
         }
         .menu {
             padding: 14px 0;
@@ -211,6 +261,12 @@
                 }
             }
         }
+    }
+    .advantages {
+        display: none;
+    }
+    .collection {
+        padding: 25px 0;
     }
     .about-index {
         &__inner {
@@ -284,7 +340,17 @@
     }
     .about-index {
         &__btn {
-            width: 100%;
+            justify-content: unset;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            text-decoration-line: underline;
+            width: unset;
+            padding: 0;
+            height: unset;
+            background: transparent !important;
+            color: $primary !important;
+            margin-top: 20px;
         }
     }
 }

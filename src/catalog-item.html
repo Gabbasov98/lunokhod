@@ -9,7 +9,7 @@
                 <div class='container'>
                     @@include('components/page-blocks/_breadcrumbs.html',{"second":"Каталог","third":"Беспроводные наушники","fourth":"Беспроводные наушники Apple AirPods Pro MWP22"})
                     <h1 class="catalog-item__title">Беспроводные наушники Apple AirPods Pro MWP22</h1>
-                    <div class="catalog-item__art">(арт. 000000)</div>
+
                     <div class='catalog-item__inner'>
                         <div class="catalog-item__left">
                             <div class="catalog-gallery">
@@ -75,11 +75,19 @@
                             </div>
                         </div>
                         <div class="catalog-item__right">
-                            <div class="catalog-item__price1">800.00 руб.</div>
-                            <div class="catalog-item__price2">777.00 руб.</div>
+                            <div class="catalog-item__art">(арт. 000000)</div>
+                            <div class="catalog-item__price">1 777.00 р.</div>
+                            <div class="catalog-item__prices">
+                                <span class="catalog-item__price-old">4 200.00 р.</span>
+                                <span class="catalog-item__price-sale">-1 200.00 р.</span>
+                            </div>
                             <div class="catalog-item__has">
                                 <img src="img/correct.svg" alt="">
                                 <span>Есть в наличии</span>
+                            </div>
+                            <div class="catalog-item__has catalog-item__has--no">
+                                <img src="img/correct2.svg" alt="">
+                                <span>Нет наличии</span>
                             </div>
 
                             <div class="catalog-item__radios">
@@ -148,23 +156,44 @@
                                 </div>
                             </div>
 
-                            <div class="catalog-item__calc">
-                                <div class="catalog-item__calc-title">Количество:</div>
-                                <div class='cartcalc form-group catalog-item__calc-input'>
-                                    <button class='ccalc-minus'>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="10" cy="10" r="10" fill="#F89D33"/>
-                                            <path d="M6.54297 10.596H13.725V9.21002H6.54297V10.596Z" fill="white"/>
-                                        </svg>
-                                    </button>
-                                    <input type='text' value='1'>
-                                    <button class='ccalc-plus'>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="10" cy="10" r="10" fill="#F89D33"/>
-                                            <path d="M6.54297 10.596H13.725V9.21002H6.54297V10.596Z" fill="white"/>
-                                            <path d="M9.44212 6.31201L9.44212 13.494L10.8281 13.494L10.8281 6.31201L9.44212 6.31201Z" fill="white"/>
-                                        </svg>
-                                    </button>
+                            <div class="catalog-advantages">
+                                <div class="catalog-advantages__item">
+                                    <i class="catalog-advantages__icon">
+                                        <img src="img/advantages-icon.svg" alt="">
+                                    </i>
+                                    <div class="catalog-advantages__content">
+                                        <div class="catalog-advantages__title">
+                                            <span>Доставка</span>
+                                        </div>
+                                        <div class="catalog-advantages__desc">
+                                            <p>Минск - сегодня, бесплатно</p>
+                                            <p>По РБ - завтра, бесплатно</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog-advantages__item">
+                                    <i class="catalog-advantages__icon">
+                                        <img src="img/advantages-icon8.svg" alt="">
+                                    </i>
+                                    <div class="catalog-advantages__content">
+                                        <div class="catalog-advantages__title">
+                                            <span>Самовывоз</span>
+                                        </div>
+                                        <div class="catalog-advantages__desc">
+                                            <p>Сегодня, по адресу:</p>
+                                            <p>г. Минск, ул. Туровского, 6</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog-advantages__item catalog-advantages__item2">
+                                    <i class="catalog-advantages__icon">
+                                        <img src="img/advantages-icon9.svg" alt="">
+                                    </i>
+                                    <div class="catalog-advantages__content">
+                                        <div class="catalog-advantages__title">
+                                            <span>Гарантия </span> 24 месяца
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -182,9 +211,6 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
-                    <div class="advantages">
-                        @@include('components/page-blocks/_advantages.html')
                     </div>
                 </div>
             </section>
