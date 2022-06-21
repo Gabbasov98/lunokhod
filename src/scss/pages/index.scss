@@ -12,13 +12,21 @@
         margin-right: 24px;
     }
     &__right {
-        flex-grow: 1;
+        width: calc(100% - 316px);
     }
-    &__img {
+    &__slider {
         img {
             display: block;
             width: 100%;
             border-radius: 6px;
+        }
+    }
+    .swiper {
+        &-container {
+            overflow: hidden;
+        }
+        &-pagination {
+            display: none;
         }
     }
     &__items {
@@ -207,6 +215,15 @@
         &__left {
             display: none;
         }
+        &__right {
+            width: 100%;
+        }
+        .swiper {
+            &-pagination {
+                position: static;
+                margin-top: 15px;
+            }
+        }
         &__items {
             grid-template-columns: 1fr 1fr 1fr;
             gap: 8px;
@@ -320,6 +337,14 @@
     .news-index {
         &__link {
             font-size: 14px;
+        }
+    }
+    .collection {
+        .swiper {
+            &-slide {
+                opacity: 1;
+                pointer-events: unset;
+            }
         }
     }
 }
