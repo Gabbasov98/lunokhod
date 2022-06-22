@@ -446,6 +446,9 @@
 @media screen and (max-width: 992px) {
     .catalog-item {
         padding: 20px 0 29px;
+        &__has {
+            margin-bottom: 15px;
+        }
         &__title {
             font-size: 20px;
             line-height: 140%;

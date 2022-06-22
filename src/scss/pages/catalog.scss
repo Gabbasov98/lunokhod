@@ -251,15 +251,18 @@
 
 @media screen and (max-width: 992px) {
     .catalog {
-        padding-top: 25px;
+        padding-top: 12px;
         &__inner {
             display: block;
             position: relative;
-            padding-top: 45px;
+            padding-top: 35px;
+        }
+        &__title {
+            margin: 0;
         }
         &__sidebar {
             width: 100%;
-            margin: 0 0 20px;
+            margin: 0;
         }
         &__content {
             width: 100%;
@@ -384,7 +387,7 @@
         }
     }
     .popular {
-        margin-top: 20px;
+        margin-top: 15px;
         &__wrap {
             width: calc(100% + 5px);
         }
