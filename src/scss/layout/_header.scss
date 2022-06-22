@@ -4,6 +4,9 @@
     padding: 24px 0;
     background: #FFFFFF;
     position: relative;
+    position: fixed;
+    width: 100%;
+    top: 56px;
     &__inner {
         display: flex;
         flex-wrap: wrap;
@@ -277,9 +280,13 @@
 }
 
 .header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-image: url(../img/header-bg.webp);
     // background-size: 100% auto;
-    position: relative;
+    // position: relative;
     &:before {
         content: '';
         position: absolute;
