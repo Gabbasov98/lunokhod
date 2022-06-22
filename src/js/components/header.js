@@ -49,7 +49,9 @@ if (header) {
     fixHeader()
     window.onscroll = function() {
         fixHeader()
-        fixMobHeader()
+        if (window.innerWidth < 992) {
+            fixMobHeader()
+        }
     }
 }
 

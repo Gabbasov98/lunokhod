@@ -25,3 +25,20 @@
         }
     }
 }
+
+@media screen and (max-width: 992px) {
+    .breadcrumbs {
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        padding-left: 15px;
+        &::-webkit-scrollbar {
+            width: 0px;
+        }
+        &__item {
+            flex-shrink: 0;
+        }
+    }
+}
