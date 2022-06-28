@@ -186,6 +186,7 @@
         align-items: center;
         flex-wrap: wrap;
         width: calc(100% + 8px);
+        z-index: 2;
     }
     &__badge {
         padding: 0 39.5px;
@@ -197,7 +198,7 @@
         background-color: $blue;
         display: flex;
         align-items: center;
-        margin-right: 4px;
+        margin: 4px 4px 0 0;
         &--red {
             background-color: $red;
         }
