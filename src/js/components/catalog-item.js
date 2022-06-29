@@ -33,24 +33,6 @@ function catalogGallery() {
 catalogGallery()
 
 
-let catalogRadios = document.querySelectorAll(".catalog-item__radio input")
-
-catalogRadios.forEach(el => {
-    if (el.checked) {
-        let title = el.closest(".catalog-item__radios").childNodes[1].childNodes[1]
-        title.innerHTML = el.value
-    }
-});
-
-catalogRadios.forEach(el => {
-    el.oninput = function() {
-        if (el.checked) {
-            let title = el.closest(".catalog-item__radios").childNodes[1].childNodes[1]
-            title.innerHTML = el.value
-        }
-    }
-});
-
 let catalogTabs = document.querySelectorAll(".catalog-detail__tab")
 let catalogContent = document.querySelectorAll(".catalog-detail__content")
 
