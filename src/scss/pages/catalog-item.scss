@@ -93,14 +93,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
         &--active {
             border-color: $primary;
+            outline: 1px solid $primary !important;
         }
     }
     &__color {
         width: 56px;
         height: 56px;
         margin: 12px 16px 0 0;
+        padding: 5px;
         img {
             max-width: 100%;
             max-height: 100%;
@@ -175,16 +178,17 @@
         z-index: 2;
     }
     &__badge {
-        padding: 0 39.5px;
-        height: 32px;
+        padding: 0 12px;
+        height: 22px;
         border-radius: 2px;
         color: #fff;
         font-weight: 700;
-        font-size: 14px;
+        font-size: 10px;
         background-color: $blue;
         display: flex;
         align-items: center;
-        margin: 4px 4px 0 0;
+        margin-right: 4px;
+        margin: 0 4px 4px 0;
         &--red {
             background-color: $red;
         }
@@ -230,6 +234,9 @@
         height: 100%;
         width: calc(100% - 96px);
         margin-right: 0;
+        .swiper-slide {
+            padding: 50px;
+        }
     }
 }
 
@@ -272,7 +279,7 @@
     &__desc {
         margin-top: 4px;
         font-size: 13.4118px;
-        line-height: 13px;
+        line-height: 120%;
         p {
             font-size: inherit;
             line-height: inherit;

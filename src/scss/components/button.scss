@@ -14,6 +14,9 @@
     border-radius: 6px;
     background-image: $primary-gradient;
     color: #fff;
+    background-size: 200% 200%;
+    background-position: center;
+    font-weight: 700;
     &:hover {
         color: #fff;
         background-image: $primary-gradient2;
