@@ -88,15 +88,15 @@
     }
     &__radio {
         position: relative;
-        border: 1px solid #F1F1F1;
-        border-radius: 4px;
+        border: 1.5px solid #F1F1F1;
+        border-radius: 6px;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
         &--active {
             border-color: $primary;
-            outline: 1px solid $primary !important;
+            box-shadow: 0 0 0 1px $primary;
         }
     }
     &__color {
