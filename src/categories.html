@@ -1,0 +1,77 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Главная", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        @@include('components/page-blocks/_header.html')
+        <main class="content">
+
+            <section class='categories'>
+                <div class='container'>
+                    @@include('components/page-blocks/_breadcrumbs.html',{"second":"Каталог","third":"","fourth":""})
+                    <h1 class="categories__title">Каталог</h1>
+
+                    <div class='categories__groups'>
+                        <div class="categories__group">
+                            <div class="categories__subtitle">Роботы-пылесосы</div>
+                            <div class="categories__items">
+                                <a href="" class="categories__item">XIAOMI</a>
+                                <a href="" class="categories__item">HOBOT</a>
+                                <a href="" class="categories__item">ICLEBO</a>
+                                <a href="" class="categories__item">XIAOMI</a>
+                            </div>
+                        </div>
+                        <div class="categories__group">
+                            <div class="categories__subtitle">Пылесосы вертикальные</div>
+                            <div class="categories__items">
+                                <a href="" class="categories__item">SAMSUNG</a>
+                                <a href="" class="categories__item">DYSON</a>
+                                <a href="" class="categories__item">KARCHER</a>
+                            </div>
+                        </div>
+                        <div class="categories__group">
+                            <div class="categories__subtitle">Аксессуары к пылесосам</div>
+                            <div class="categories__items">
+                                <a href="" class="categories__item">DYSON</a>
+                            </div>
+                        </div>
+                        <div class="categories__group">
+                            <div class="categories__subtitle">VR очки</div>
+                            <div class="categories__items">
+                                <a href="" class="categories__item">HTC</a>
+                                <a href="" class="categories__item">SONY</a>
+                            </div>
+                        </div>
+                        <div class="categories__group">
+                            <div class="categories__subtitle">Аксессуары к VR очкам</div>
+                            <div class="categories__items">
+                                <a href="" class="categories__item">HTC</a>
+                            </div>
+                        </div>
+                        <div class="categories__group">
+                            <div class="categories__subtitle">Экшн камеры</div>
+                            <div class="categories__items">
+                                <a href="" class="categories__item">CANON</a>
+                                <a href="" class="categories__item">GOPRO</a>
+                                <a href="" class="categories__item">SJCAM</a>
+                            </div>
+                        </div>
+                        <div class="categories__group">
+                            <div class="categories__subtitle">Беспроводные наушники</div>
+                            <div class="categories__items">
+                                <a href="" class="categories__item">APPLE</a>
+                                <a href="" class="categories__item">SONY</a>
+                                <a href="" class="categories__item">JBL</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        @@include('components/page-blocks/_footer.html')
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

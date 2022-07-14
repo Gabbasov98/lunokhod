@@ -31,7 +31,8 @@
 .btn-orange-outline {
     font-weight: 400;
     font-size: 16px;
-    border: 1px solid $primary;
+    border: 1.5px solid $primary;
+    border-radius: 6px;
     color: $primary;
     &:hover {
         color: #fff;

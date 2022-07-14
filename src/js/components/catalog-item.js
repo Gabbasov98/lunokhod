@@ -5,6 +5,10 @@ function catalogGallery() {
         direction: "vertical",
         freeMode: true,
         watchSlidesProgress: true,
+        navigation: {
+            nextEl: '.catalog-gallery .swiper-button-next',
+            prevEl: '.catalog-gallery .swiper-button-prev',
+        },
         breakpoints: {
             320: {
                 direction: "horizontal",

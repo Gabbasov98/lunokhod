@@ -3,6 +3,7 @@ const plugins = [
     'node_modules/swiper/swiper-bundle.css',
     'node_modules/native-slide-toggle/dist/nst.min.css',
     'node_modules/nouislider/dist/nouislider.css',
+    'src/libs/css/fancybox.css',
 ];
 
 const {

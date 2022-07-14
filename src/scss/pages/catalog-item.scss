@@ -156,6 +156,10 @@
             font-weight: 700;
             font-size: 16px;
         }
+        //&--one{
+        //    border-width: 1.5px;
+        //    border-radius: 6px;
+        //}
     }
     .advantages {
         margin-top: 64px;
@@ -180,7 +184,7 @@
     &__badge {
         padding: 0 12px;
         height: 22px;
-        border-radius: 2px;
+        border-radius: 3px;
         color: #fff;
         font-weight: 700;
         font-size: 10px;
@@ -221,12 +225,40 @@
     &__small {
         width: 72px;
         flex-shrink: 0;
-        height: 100%;
         order: -1;
         margin: 0;
+        padding: 47px 0;
+        position: relative;
         .swiper {
+            height: 100%;
+            overflow: hidden;
             &-slide {
                 height: 70px;
+            }
+            &-button{
+                &-prev,
+                &-next{
+                    background: #F1F1F1;
+                    border: 1px solid #F1F1F1;
+                    border-radius: 4px;
+                    width: 28px;
+                    height: 28px;
+                    right: unset;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    margin: 0;
+                    &.swiper-button-disabled{
+                        opacity: 1;
+                        pointer-events: unset;
+                    }
+                }
+                &-next{
+                    top: unset;
+                    bottom: 0;
+                }
+                &-prev{
+                    top: 0;
+                }
             }
         }
     }

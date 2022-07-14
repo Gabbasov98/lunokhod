@@ -3,6 +3,7 @@ const plugins = [
     'node_modules/bootstrap/dist/js/bootstrap.js',
     'node_modules/native-slide-toggle/dist/nst.min.js',
     'node_modules/nouislider/dist/nouislider.js',
+    'src/libs/js/fancybox.umd.js',
 ];
 const {
     src,
