@@ -232,6 +232,7 @@
             height: 100%;
             overflow: hidden;
             &-slide {
+                padding: 10px;
                 height: 70px;
                 position: relative;
                 &::before{
@@ -406,8 +407,9 @@
     }
     img {
         border-radius: 6px;
-        width: 100%;
+        width: 80%;
         display: block;
+        margin: 22px auto;
     }
 }
 
