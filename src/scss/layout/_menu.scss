@@ -12,6 +12,26 @@
     &__item {
         padding: 10px 20px;
         position: relative;
+        &:first-child{
+            &::before{
+                content: '';
+                position: absolute;
+                background-color: #fff;
+                right: -2px;
+                top: -11px;
+                border-top: 1px solid #F1F1F1;
+                border-right: 1px solid #F1F1F1;
+                width: 20px;
+                height: 20px;
+                opacity: 0;
+                pointer-events: none;
+            }
+            &:hover{
+                &::before{
+                    opacity: 1;
+                }
+            }
+        }
         &:hover {
             @media screen and (min-width: 992px) {
                 .menu__item-hidden {
@@ -44,7 +64,7 @@
             transition: all .225s;
             overflow: hidden;
             position: absolute;
-            top: -10px;
+            top: -11px;
             left: 100%;
             background-color: #fff;
             border: 1px solid #F1F1F1;
