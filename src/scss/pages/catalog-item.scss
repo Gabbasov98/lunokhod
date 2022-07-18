@@ -168,7 +168,7 @@
 .catalog-gallery {
     display: flex;
     justify-content: space-between;
-    height: 500px;
+    height: 515px;
     position: relative;
     &__badges {
         position: absolute;
@@ -226,7 +226,7 @@
         flex-shrink: 0;
         order: -1;
         margin: 0;
-        padding: 47px 0;
+        padding: 45px 0;
         position: relative;
         .swiper {
             height: 100%;
@@ -235,6 +235,12 @@
                 padding: 10px;
                 height: 70px;
                 position: relative;
+                &:hover{
+                    cursor: pointer;
+                    &::before{
+                        opacity: 1;
+                    }
+                }
                 &::before{
                     content: '';
                     position: absolute;
@@ -245,6 +251,7 @@
                     border-radius: 4px;
                     border: 1.5px solid $primary;
                     opacity: 0;
+                    transition: all .225s;
                 }
                 &-thumb-active{
                     &::before{
@@ -407,9 +414,10 @@
     }
     img {
         border-radius: 6px;
-        width: 80%;
+        max-width: 40%;
+        height: auto;
         display: block;
-        margin: 22px auto;
+        margin: 22px 0;
     }
 }
 

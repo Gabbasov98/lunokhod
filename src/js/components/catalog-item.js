@@ -1,7 +1,7 @@
 function catalogGallery() {
     var swiper = new Swiper(".catalog-gallery .mySwiper", {
         spaceBetween: 16,
-        slidesPerView: "auto",
+        slidesPerView: 5,
         direction: "vertical",
         freeMode: true,
         watchSlidesProgress: true,
