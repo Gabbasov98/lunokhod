@@ -45,6 +45,8 @@ if (headerMenuBackdrop) {
     }
 }
 
+var scrollPos = 0;
+
 if (header) {
     fixHeader()
     window.onscroll = function() {
@@ -52,6 +54,7 @@ if (header) {
         if (window.innerWidth < 992) {
             fixMobHeader()
         }
+        scrollPos = window.scrollY
     }
 }
 
@@ -67,9 +70,15 @@ function fixHeader() {
         }
     }
 
+    if (window.scrollY > scrollPos) {
+        header.classList.add("header--hide-nav")
+    } else{
+        header.classList.remove("header--hide-nav")
+    }
+
 }
 
-var scrollPos = 0;
+
 
 function fixMobHeader() {
     if (window.scrollY > scrollPos) {
@@ -79,7 +88,7 @@ function fixMobHeader() {
         header.classList.remove("header--fix")
         headerNav.classList.remove("header-nav--fix")
     }
-    scrollPos = window.scrollY
+    // scrollPos = window.scrollY
 }
 
 let catalogToggler = document.querySelector(".header__catalog-toggler")

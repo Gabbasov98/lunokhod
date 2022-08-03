@@ -1,7 +1,6 @@
 @import "../vars";
 @import "../mixins.scss";
 .header {
-    padding: 21px 0 0;
     background: #FFFFFF;
     position: fixed;
     width: 100%;
@@ -9,6 +8,7 @@
     z-index: 20;
     box-shadow: 0px 4px 10px rgba(202, 202, 202, 0.13);
     &__inner {
+        padding: 21px 0;
         display: flex;
         align-items: center;
         position: relative;
@@ -205,9 +205,14 @@
         pointer-events: none;
     }
     @media screen and (min-width: 992px) {
+        &--hide-nav{
+            .nav{
+                display: none;
+            }
+        }
         &--fix {
             z-index: 22;
-            padding: 16px 0 0;
+            //padding: 16px 0 0;
             position: fixed;
             top: 0;
             left: 0;
@@ -219,6 +224,7 @@
             .header {
                 &__inner {
                     flex-wrap: nowrap;
+                    padding: 16px 0;
                 }
                 &__logo {
                     width: 246px;
@@ -259,7 +265,8 @@
                 }
             }
             .menu {
-                left: 304px;
+                left: 286px;
+                //margin-top: -10px;
             }
         }
     }
@@ -322,8 +329,7 @@
 }
 
 .nav{
-    padding: 17px 0;
-    margin-top: 12px;
+    padding: 8px 0 17px;
     background: #FFFFFF;
     .swiper-wrapper{
         align-items: stretch;
@@ -414,6 +420,7 @@
         width: 100%;
         z-index: 20;
         &__inner {
+            padding: 0;
             flex-wrap: wrap;
             justify-content: space-between;
         }
