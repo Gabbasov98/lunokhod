@@ -239,13 +239,13 @@
                 }
                 &__btn {
                     width: 48px;
-                    span {
+                    &-text {
                         display: none;
                     }
                     &-icon {
                         display: block;
                     }
-                    img{
+                    &-img{
                         margin: 0;
                     }
                 }
