@@ -114,7 +114,7 @@ if (catalogToggler) {
 function navSlider() {
     var swiper = new Swiper('.nav .swiper-container', {
         slidesPerView: "auto",
-        spaceBetween: 32,
+        spaceBetween: 24,
     })
 }
 

@@ -44,7 +44,6 @@
                     </div>
                     <button class="header__contacts-toggler btn">
                         <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="5" height="5" transform="translate(7.5 4.5) rotate(135)" fill="#F1F1F1"/>
                             <rect x="7.5" y="4.5" width="5" height="0.833333" transform="rotate(135 7.5 4.5)" fill="#505050"/>
                             <rect x="3.96484" y="8.03552" width="5" height="0.833333" transform="rotate(-135 3.96484 8.03552)" fill="#505050"/>
                         </svg>
@@ -342,58 +341,76 @@
             <section class='main'>
                 <div class='container'>
                     <div class='main__inner'>
-                        <div class="main__slider">
-                            <div class='swiper-container'>
-                                <div class='swiper-wrapper'>
-                                    <div class='swiper-slide'>
-                                        <img src="img/main.webp" alt="">
-                                    </div>
-                                    <div class='swiper-slide'>
-                                        <img src="img/main.webp" alt="">
-                                    </div>
-                                    <div class='swiper-slide'>
-                                        <img src="img/main.webp" alt="">
+                        <div class="main__banners">
+                            <div class="main__slider">
+                                <div class='swiper-container'>
+                                    <div class='swiper-wrapper'>
+                                        <div class='swiper-slide'>
+                                            <img src="img/main.webp" alt="">
+                                        </div>
+                                        <div class='swiper-slide'>
+                                            <img src="img/main.webp" alt="">
+                                        </div>
+                                        <div class='swiper-slide'>
+                                            <img src="img/main.webp" alt="">
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="swiper-button-prev">
+                                    <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="11.5" y="23.5" width="16" height="2.66667" transform="rotate(-135 11.5 23.5)" fill="white"/>
+                                        <rect x="0.1875" y="12.1863" width="16" height="2.66667" transform="rotate(-45 0.1875 12.1863)" fill="white"/>
+                                    </svg>
+                                </div>
+                                <div class="swiper-button-next">
+                                    <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="16" height="2.66667" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 11.3125 23.5)" fill="white"/>
+                                        <rect width="16" height="2.66667" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 22.625 12.1863)" fill="white"/>
+                                    </svg>
+                                </div>
+                                <div class='swiper-pagination'></div>
                             </div>
-                            <div class="swiper-button-prev">
-                                <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="11.5" y="23.5" width="16" height="2.66667" transform="rotate(-135 11.5 23.5)" fill="white"/>
-                                    <rect x="0.1875" y="12.1863" width="16" height="2.66667" transform="rotate(-45 0.1875 12.1863)" fill="white"/>
-                                </svg>
+                            <div class="main__banner">
+                                <img src="img/banner.png" alt="">
                             </div>
-                            <div class="swiper-button-next">
-                                <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="16" height="2.66667" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 11.3125 23.5)" fill="white"/>
-                                    <rect width="16" height="2.66667" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 22.625 12.1863)" fill="white"/>
-                                </svg>
-                            </div>
-                            <div class='swiper-pagination'></div>
                         </div>
+
                         <div class="main__items-title display2">Популярные категории</div>
                         <div class="main__items">
                                 <a href="" class="main__item">
-                                    <img src="img/main-icon.png" alt="">
+                                    <i class="main__item-icon">
+                                        <img src="img/main-icon.png" alt="">
+                                    </i>
                                     <span>Роботы-пылесосы</span>
                                 </a>
                                 <a href="" class="main__item">
-                                    <img src="img/main-icon2.png" alt="">
+                                    <i class="main__item-icon">
+                                        <img src="img/main-icon2.png" alt="">
+                                    </i>
                                     <span>Фотоаппараты</span>
                                 </a>
                                 <a href="" class="main__item">
-                                    <img src="img/main-icon3.png" alt="">
+                                    <i class="main__item-icon">
+                                        <img src="img/main-icon3.png" alt="">
+                                    </i>
                                     <span>Наушники</span>
                                 </a>
                                 <a href="" class="main__item">
-                                    <img src="img/main-icon4.png" alt="">
+                                    <i class="main__item-icon">
+                                        <img src="img/main-icon4.png" alt="">
+                                    </i>
                                     <span>Умные часы</span>
                                 </a>
                                 <a href="" class="main__item">
-                                    <img src="img/main-icon5.png" alt="">
+                                    <i class="main__item-icon">
+                                        <img src="img/main-icon5.png" alt="">
+                                    </i>
                                     <span>Ноутбуки</span>
                                 </a>
                                 <a href="" class="main__item">
-                                    <img src="img/main-icon6.png" alt="">
+                                    <i class="main__item-icon">
+                                        <img src="img/main-icon6.png" alt="">
+                                    </i>
                                     <span>Экшн-камеры</span>
                                 </a>
                             </div>

@@ -39,7 +39,7 @@
         }
         &-title {
             font-weight: 500;
-            font-size: 16px;
+            font-size: 14px;
             line-height: 150%;
         }
         &-hint {
@@ -53,7 +53,7 @@
         position: relative;
         display: flex;
         align-items: center;
-        margin-left: 56px;
+        margin-left: 40px;
         &-toggler {
             flex-shrink: 0;
             border-radius: 50%;
@@ -90,7 +90,7 @@
         display: flex;
         align-items: center;
         font-weight: 500;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 150%;
         white-space: nowrap;
         svg {
@@ -198,7 +198,7 @@
     .menu {
         position: absolute;
         z-index: 12;
-        left: 0;
+        left: 288px;
         top: 100%;
         margin-top: 16px;
         opacity: 0;
@@ -292,6 +292,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 21;
     &__inner {
         display: flex;
         align-items: center;
@@ -330,10 +331,11 @@
         display: flex;
         align-items: center;
         overflow: hidden;
+        transform: translateX(-8px);
     }
     &__link{
         height: auto;
-        margin-right: 32px;
+        margin-right: 24px;
         flex-shrink: 0;
         white-space: nowrap;
         font-weight: 500;
@@ -343,16 +345,18 @@
         display: flex;
         align-items: center;
         transition: all .3s;
+        padding-left: 8px;
         svg{
             margin-right: 6px;
         }
         &--sale{
             font-weight: 700;
             color: $primary;
+            margin-right: 16px;
             height: 30px;
             border-radius: 6px;
+            padding-right: 8px;
             &:hover{
-                padding: 0 8px;
                 background-color: $primary;
                 color: #fff;
                 path{
