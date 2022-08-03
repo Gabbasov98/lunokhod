@@ -206,6 +206,7 @@
     }
     @media screen and (min-width: 992px) {
         &--fix {
+            z-index: 22;
             padding: 16px 0 0;
             position: fixed;
             top: 0;

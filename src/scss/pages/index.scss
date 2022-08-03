@@ -2,9 +2,6 @@
 @import "../mixins.scss";
 .main {
     padding-bottom: 32px;
-    &__inner{
-        overflow: hidden;
-    }
     &__banners{
         display: flex;
     }
