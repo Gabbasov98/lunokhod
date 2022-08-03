@@ -134,12 +134,19 @@
         font-weight: 700;
         font-size: 14px;
         position: relative;
-        img{
+        &-img{
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-right: 10px;
             width: 19px;
         }
         &-close{
             display: none;
+            width: 14px;
+        }
+        &-icon {
+            width: 19px;
         }
     }
     &__search {
