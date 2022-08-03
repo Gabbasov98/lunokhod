@@ -1,23 +1,22 @@
 @import "../vars";
 @import "../mixins.scss";
 .header {
-    padding: 24px 0;
+    padding: 21px 0 0;
     background: #FFFFFF;
-    position: relative;
     position: fixed;
     width: 100%;
-    top: 56px;
+    top: 58px;
     z-index: 20;
+    box-shadow: 0px 4px 10px rgba(202, 202, 202, 0.13);
     &__inner {
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
         position: relative;
     }
     &__logo {
-        width: 292px;
+        width: 248px;
         display: block;
-        margin: 0 58px 35px 0;
+        margin-right: 40px;
         flex-shrink: 0;
         img {
             width: 100%;
@@ -34,8 +33,9 @@
     }
     &__address {
         display: flex;
+        align-items: center;
         svg {
-            margin-right: 8px;
+            margin-right: 6px;
         }
         &-title {
             font-weight: 500;
@@ -57,10 +57,10 @@
         &-toggler {
             flex-shrink: 0;
             border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            margin-left: 18px;
-            background-color: rgba($primary, .2);
+            width: 20px;
+            height: 20px;
+            margin-left: 8px;
+            background: #F1F1F1;
             &:hover {
                 background-color: rgba($primary, .5);
             }
@@ -93,11 +93,8 @@
         font-size: 16px;
         line-height: 150%;
         white-space: nowrap;
-        img {
-            margin-right: 10px;
-        }
-        &:not(:last-child) {
-            margin-bottom: 2px;
+        svg {
+            margin-right: 6px;
         }
     }
     &__socials {
@@ -131,20 +128,17 @@
     }
     &__btn {
         z-index: 14;
-        width: 292px;
-        height: 56px;
+        width: 132px;
+        height: 48px;
         flex-shrink: 0;
         font-weight: 700;
-        font-size: 16px;
+        font-size: 14px;
         position: relative;
-        &-arrow {
-            position: absolute;
-            right: 24px;
-            top: 50%;
-            transform: translateY(-25%);
+        img{
+            margin-right: 10px;
+            width: 19px;
         }
-        &-close,
-        &-icon {
+        &-close{
             display: none;
         }
     }
@@ -154,14 +148,15 @@
         input {
             border: 1px solid #F1F1F1;
             border-radius: 6px;
-            height: 56px;
+            height: 48px;
             padding: 0 60px 0 25px;
             width: 100%;
+            font-size: 14px;
         }
         &-btn {
             position: absolute;
             background: #F1F1F1;
-            width: 56px;
+            width: 48px;
             height: 100%;
             border-radius: 0 6px 6px 0;
             top: 0;
@@ -171,7 +166,7 @@
     &__cart {
         display: flex;
         width: 168px;
-        height: 56px;
+        height: 48px;
         flex-shrink: 0;
         &-icon {
             height: 100%;
@@ -211,7 +206,7 @@
     }
     @media screen and (min-width: 992px) {
         &--fix {
-            padding: 16px 0;
+            padding: 16px 0 0;
             position: fixed;
             top: 0;
             left: 0;
@@ -229,15 +224,15 @@
                     margin-bottom: 0;
                 }
                 &__btn {
-                    width: 56px;
+                    width: 48px;
                     span {
-                        display: none;
-                    }
-                    &-arrow {
                         display: none;
                     }
                     &-icon {
                         display: block;
+                    }
+                    img{
+                        margin: 0;
                     }
                 }
                 &__search {
@@ -278,45 +273,92 @@
                 z-index: 12;
             }
         }
+        .header{
+            &__btn{
+                &-icon{
+                    display: none;
+                }
+                &-close{
+                    display: unset;
+                }
+            }
+        }
     }
 }
 
 .header-nav {
-    box-shadow: 0px 8px 32px rgba(94, 97, 218, 0.4);
+    border-bottom: 1px solid rgba($black, .05);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-image: url(../img/header-bg.webp);
-    // background-size: 100% auto;
-    // position: relative;
-    &:before {
-        content: '';
-        position: absolute;
-        z-index: 1;
-        background-color: rgba($black, .65);
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-    }
     &__inner {
         display: flex;
         align-items: center;
-        height: 56px;
+        justify-content: space-between;
+        min-height: 56px;
         position: relative;
         z-index: 2;
     }
+    &__right,
+    &__links{
+        display: flex;
+        align-items: center;
+    }
     &__link {
         font-size: 14px;
-        color: #FFFFFF;
-        margin-right: 48px;
+        color: #505050;
+        margin-right: 40px;
         &--active {
             color: $primary;
             pointer-events: none;
         }
         &:hover {
             @include linearText;
+        }
+    }
+}
+
+.nav{
+    padding: 17px 0;
+    margin-top: 12px;
+    background: #FFFFFF;
+    .swiper-wrapper{
+        align-items: stretch;
+    }
+    &__inner{
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+    &__link{
+        height: auto;
+        margin-right: 32px;
+        flex-shrink: 0;
+        white-space: nowrap;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 157%;
+        width: unset;
+        display: flex;
+        align-items: center;
+        transition: all .3s;
+        svg{
+            margin-right: 6px;
+        }
+        &--sale{
+            font-weight: 700;
+            color: $primary;
+            height: 30px;
+            border-radius: 6px;
+            &:hover{
+                padding: 0 8px;
+                background-color: $primary;
+                color: #fff;
+                path{
+                    fill:#fff;
+                }
+            }
         }
     }
 }
@@ -367,6 +409,7 @@
         width: 100%;
         z-index: 20;
         &__inner {
+            flex-wrap: wrap;
             justify-content: space-between;
         }
         &__logo {
@@ -406,7 +449,8 @@
         &__cart,
         &__info,
         &__contacts,
-        &__btn {
+        &__btn,
+        &__address{
             display: none;
         }
         &__mob {
@@ -522,6 +566,12 @@
             overflow: unset;
             padding: 0;
         }
+        &__links{
+            display: block;
+        }
+        &__right{
+            display: block;
+        }
         &::before {
             display: none;
         }
@@ -538,5 +588,8 @@
                 border-bottom: 1px solid #F1F1F1;
             }
         }
+    }
+    .nav{
+        display: none;
     }
 }

@@ -2,19 +2,12 @@
 @import "../mixins.scss";
 .main {
     padding-bottom: 32px;
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-    }
-    &__left {
-        width: 292px;
-        flex-shrink: 0;
-        margin-right: 24px;
-    }
-    &__right {
-        width: calc(100% - 316px);
+    &__inner{
+        overflow: hidden;
     }
     &__slider {
+        width: 74.3%;
+        position: relative;
         img {
             display: block;
             width: 100%;
@@ -22,31 +15,58 @@
         }
     }
     .swiper {
-        &-container {
-            overflow: hidden;
+        &-button{
+            &-prev,
+            &-next{
+                width: unset;
+                background-color: transparent;
+                border: none;
+                rect{
+                    transition: all .3s;
+                }
+                &:hover{
+                    rect{
+                        fill:$primary;
+                    }
+                }
+            }
+            &-prev{
+                left: 32px;
+            }
+            &-next{
+                right: 32px;
+            }
         }
         &-pagination {
-            display: none;
+            //display: none;
+            &-bullet{
+                border: 1px solid #FFFFFF;
+                background-color: transparent;
+                opacity: 1;
+                &-active{
+                    width: 5px;
+                    background-color: #fff;
+                }
+            }
         }
     }
     &__items {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(6,1fr);
         gap: 20px;
         margin-top: 24px;
         &-title {
-            display: none;
+            margin-top: 40px;
         }
     }
     &__item {
-        display: flex;
-        align-items: center;
-        padding: 0 12px;
+        padding: 12px;
         font-size: 14px;
-        line-height: 120%;
+        line-height: 157%;
         border: 1px solid #F1F1F1;
         border-radius: 6px;
         height: 112px;
+        text-align: center;
         &:hover {
             color: $black;
             box-shadow: 0px 0px 14px rgba(74, 74, 74, 0.09);
@@ -54,7 +74,8 @@
         img {
             flex-shrink: 0;
             display: block;
-            margin-right: 12px;
+            height: 62px;
+            margin: 0 auto;
         }
     }
 }
@@ -199,7 +220,7 @@
 @media screen and (max-width: 1100px) {
     .main {
         &__items {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(5,1fr);
         }
     }
     .advantages {
@@ -210,23 +231,29 @@
 @media screen and (max-width: 992px) {
     .main {
         padding: 20px 0 25px;
-        &__inner {
-            flex-wrap: wrap;
-        }
-        &__left {
-            display: none;
-        }
-        &__right {
+        &__slider{
             width: 100%;
         }
         .swiper {
+            &-button{
+                &-prev,
+                &-next{
+                    display: none;
+                }
+            }
             &-pagination {
                 position: static;
                 margin-top: 15px;
+                &-bullet{
+                    border-color: $primary;
+                    &-active{
+                        background-color: $primary;
+                    }
+                }
             }
         }
         &__items {
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(6,1fr);
             gap: 8px;
             margin: 0;
             &-title {
@@ -235,46 +262,18 @@
             }
         }
         &__item {
-            flex-direction: column;
-            align-items: center;
             padding: 12px 8px;
             height: unset;
             text-align: center;
             img {
                 height: 55px;
                 width: auto;
-                margin: 0;
             }
             span {
                 font-size: 9.62935px;
                 line-height: 16px;
                 padding-top: 10px;
                 margin-top: auto;
-            }
-        }
-        .menu {
-            padding: 14px 0;
-            &__item {
-                border: none;
-                &-show {
-                    padding: 6px 22px;
-                    &::before {
-                        position: static;
-                        order: 2;
-                        transform: unset;
-                        margin-left: 6px;
-                        transform: rotate(90deg);
-                    }
-                }
-                &.nst-is-expanded .menu__item-show::before {
-                    transform: rotate(-90deg) translateX(-3px);
-                }
-            }
-            &__link {
-                padding-left: 50px;
-                &::before {
-                    left: 35px;
-                }
             }
         }
     }
@@ -324,6 +323,11 @@
 }
 
 @media screen and (max-width: 768px) {
+    .main{
+        &__items{
+            grid-template-columns: repeat(4,1fr);
+        }
+    }
     .advantages {
         margin-top: 40px;
         grid-template-columns: repeat(2, 1fr);
@@ -351,6 +355,11 @@
 }
 
 @media screen and (max-width: 576px) {
+    .main{
+        &__items{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
     .advantages {
         grid-template-columns: repeat(1, 1fr);
         gap: 25px;
@@ -375,6 +384,14 @@
             background: transparent !important;
             color: $primary !important;
             margin-top: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px){
+    .main{
+        &__items{
+            grid-template-columns: repeat(2,1fr);
         }
     }
 }

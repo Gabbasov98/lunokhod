@@ -37,15 +37,15 @@ function projectsSliders() {
 function mainSlider() {
     var swiper = new Swiper('.main .swiper-container', {
         slidesPerView: 1,
-        spaceBetween: 10,
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
+        spaceBetween: 24,
         pagination: {
             el: '.main .swiper-pagination',
             type: 'bullets',
             clickable: true,
+        },
+        navigation: {
+            nextEl: '.main .swiper-button-next',
+            prevEl: '.main .swiper-button-prev',
         },
     })
 }
