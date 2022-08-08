@@ -75,10 +75,10 @@
     &__item {
         padding: 12px;
         font-size: 14px;
-        line-height: 157%;
+        line-height: 135%;
         border: 1px solid #F1F1F1;
         border-radius: 6px;
-        height: 112px;
+        height: 140px;
         text-align: center;
         font-weight: 500;
         &:hover {
@@ -88,7 +88,7 @@
         &-icon{
             width: 65px;
             height: 65px;
-            margin: 0 auto;
+            margin: 0 auto 5px;
             display: flex;
             align-items: center;
             justify-content: center;

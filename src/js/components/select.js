@@ -34,7 +34,6 @@ let selected = document.querySelectorAll(".custom-select__dropdown-item--selecte
 
 selected.forEach(el => {
     let val = el.innerHTML
-    console.log(val);
     for (let elem of el.closest(".custom-select").getElementsByTagName('input')) {
         elem.setAttribute("value", val)
     }

@@ -81,14 +81,14 @@ function fixHeader() {
 
 
 function fixMobHeader() {
-    if (window.scrollY > scrollPos) {
+    console.log(window.scrollY)
+    if (window.scrollY > scrollPos && window.scrollY > 100) {
         header.classList.add("header--fix")
         headerNav.classList.add("header-nav--fix")
     } else {
         header.classList.remove("header--fix")
         headerNav.classList.remove("header-nav--fix")
     }
-    // scrollPos = window.scrollY
 }
 
 let catalogToggler = document.querySelector(".header__catalog-toggler")
@@ -103,8 +103,6 @@ if (headerBurger) {
         } else {
             body.classList.toggle("fixed-body")
         }
-
-
     }
 }
 
