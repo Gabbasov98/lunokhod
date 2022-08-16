@@ -53,7 +53,9 @@
         position: relative;
         display: flex;
         align-items: center;
-        margin-left: 40px;
+        margin-left: 20px;
+        padding-left: 20px;
+        border-left: 1px solid #F1F1F1;
         &-toggler {
             flex-shrink: 0;
             border-radius: 50%;
@@ -90,7 +92,7 @@
         display: flex;
         align-items: center;
         font-weight: 500;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 150%;
         white-space: nowrap;
         svg {
@@ -201,6 +203,19 @@
     }
     &__mob-fix {
         flex-grow: 1;
+    }
+    &__contact-center{
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 133%;
+        opacity: .45;
+        min-height: 28px;
+
+        svg{
+            margin-right: 10px;
+        }
     }
     .menu {
         position: absolute;
@@ -510,6 +525,9 @@
                     margin-right: 4px;
                 }
             }
+        }
+        &__contact-center{
+            display: none;
         }
         .menu {
             margin: 0;
