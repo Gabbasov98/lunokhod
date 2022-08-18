@@ -45,7 +45,7 @@ if (headerMenuBackdrop) {
     }
 }
 
-var scrollPos = 0;
+var scrollPos = 10;
 
 if (header) {
     fixHeader()
@@ -81,7 +81,6 @@ function fixHeader() {
 
 
 function fixMobHeader() {
-    console.log(window.scrollY)
     if (window.scrollY > scrollPos && window.scrollY > 100) {
         header.classList.add("header--fix")
         headerNav.classList.add("header-nav--fix")
